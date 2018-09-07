@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background: url(2i2255j.png);
+    }
+
+    @keyframes totalspin1 {
+      from {
+        transform: rotateX(-36deg) rotateY(45deg);
+      }
+      to {
+        transform: rotateX(324deg) rotateY(405deg);
+      }
+    }
+
+    /* scene wrapper */
+    .wrapper {
+      height: 200px;
+      margin-top: 100px;
+      position: relative;
+      perspective: 800;
+      perspective-origin: 50% 100px;
+    }
+
+    /* outer cube */
+    b {
+      position: absolute;
+      display: block;
+      font-size: 20px;
+      text-align: center;
+      line-height: 100px;
+      color: rgba(0, 0, 0, 0.5);
+      font-family: sans-serif;
+      text-transform: uppercase;
+      transition: all 1s linear;
+    }
+
+    b.back {
+      transform: translateZ(-50px) rotateX(0deg);
+      background: #00ADEE;
+      width: 100px;
+      height: 100px;
+    }
+
+    b.right {
+      transform: rotateY(-270deg) translateX(50px);
+      transform-origin: top right;
+      background: #66CEF5;
+      width: 100px;
+      height: 100px;
+    }
+
+    b.left {
+      transform: rotateY(270deg) translateX(-50px);
+      transform-origin: center left;
+      width: 100px;
+      height: 100px;
+    }
+
+    b.top {
+      transform: rotateX(-90deg) translateY(-49px) translateX(1px);
+      transform-origin: top center;
+      width: 100px;
+      height: 100px;
+      background: #99DFF9;
+    }
+
+    b.bottom {
+      transform: rotateX(90deg) translateY(50px);
+      transform-origin: bottom center;
+      width: 100px;
+      height: 100px;
+    }
+
+    b.front {
+      transform: translateZ(50px);
+      width: 100px;
+      height: 100px;
+    }
+
+
+    b.back1 {
+      transform: translateZ(-25px) rotateX(0deg);
+      background: #66CEF5;
+      width: 50px;
+      height: 50px;
+    }
+
+    b.right1 {
+      transform: rotateY(-270deg) translateX(25px);
+      transform-origin: top right;
+      background: #00ADEE;
+      width: 50px;
+      height: 50px;
+    }
+
+    b.left1 {
+      transform: rotateY(270deg) translateX(-25px);
+      transform-origin: center left;
+      width: 50px;
+      height: 50px;
+    }
+
+    b.top1 {
+      transform: rotateX(-90deg) translateY(-25px) translateX(1px);
+      transform-origin: top center;
+      width: 50px;
+      height: 50px;
+
+    }
+
+    b.bottom1 {
+      transform: rotateX(90deg) translateY(25px);
+      transform-origin: bottom center;
+      width: 50px;
+      height: 50px;
+      background: #99DFF9;
+    }
+
+    b.front1 {
+      transform: translateZ(25px);
+      width: 50px;
+      height: 50px;
+    }
+
+
+    b.back2 {
+      transform: translateZ(-25px) rotateX(0deg);
+      background: #415D78;
+      width: 50px;
+      height: 50px;
+    }
+
+    b.right2 {
+      transform: rotateY(-270deg) translateX(25px);
+      transform-origin: top right;
+      background: #123456;
+      width: 50px;
+      height: 50px;
+    }
+
+    b.left2 {
+      transform: rotateY(270deg) translateX(-25px);
+      transform-origin: center left;
+      width: 50px;
+      height: 50px;
+      background: #123456;
+    }
+
+    b.top2 {
+      transform: rotateX(-90deg) translateY(-25px) translateX(0px);
+      transform-origin: top center;
+      width: 50px;
+      height: 50px;
+      background: #71859A;
+    }
+
+    b.bottom2 {
+      transform: rotateX(90deg) translateY(25px);
+      transform-origin: bottom center;
+      width: 50px;
+      height: 50px;
+      background: #71859A;
+    }
+
+    b.front2 {
+      transform: translateZ(25px);
+      width: 50px;
+      height: 50px;
+      background: #415D78;
+    }
+
+
+    .cube2 {
+      position: relative;
+      margin: 50px 100px;
+      width: 100px;
+      transform-style: preserve-3d;
+      transition: all 1s linear;
+      transform: rotateX(36deg) rotateY(45deg);
+    }
+
+    .cube3 {
+      position: relative;
+      margin: 50px 100px;
+      width: 100px;
+      transform-style: preserve-3d;
+      transition: all 1s linear;
+      transform: rotateX(-36deg) rotateY(45deg);
+      left: 17px;
+      top: 11px;
+    }
+
+    .cube4 {
+      position: relative;
+      margin: 50px 100px;
+      width: 100px;
+      transform-style: preserve-3d;
+      transition: all 1s linear;
+      transform: rotateX(-36deg) rotateY(45deg);
+      left: 317px;
+      top: 11px;
+    }
+
+    .cube-4-left {
+      left: 17px !important;
+      transition: all 4s linear;
+    }
+
+    .cube-4-animation {
+      animation: totalspin1 4s infinite linear;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="cube2">
+      <b class="front"></b>
+      <b class="back"></b>
+      <b class="top"></b>
+      <b class="bottom"></b>
+      <b class="left"></b>
+      <b class="right"></b>
+    </div>
+    <div class="cube3">
+      <b class="front1"></b>
+      <b class="back1"></b>
+      <b class="top1"></b>
+      <b class="bottom1"></b>
+      <b class="left1"></b>
+      <b class="right1"></b>
+    </div>
+
+    <div class="cube4" id="movable-cube" >
+      <b class="front2"></b>
+      <b class="back2"></b>
+      <b class="top2"></b>
+      <b class="bottom2"></b>
+      <b class="left2"></b>
+      <b class="right2"></b>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    setTimeout(function () {
+          startAnimation();
+        }, 1000);
+  
+    function startAnimation() {
+      var element = document.getElementById("movable-cube");
+
+      // Moving the cube to left
+      element.classList.add("cube-4-left"); 
+      // animating the cube
+      element.classList.add("cube-4-animation"); 
+
+      // removing animation after cube reached destination
+      setTimeout(function () {
+        element.classList.remove("cube-4-animation"); 
+      }, 4000);
+
+    }
+  </script>
+
+</body>
+
+</html>
